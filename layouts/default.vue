@@ -19,11 +19,6 @@ export default {
     footerTop,
     siteFooter,
   },
-  data() {
-    return {
-      title: 'abc',
-    }
-  },
 }
 </script>
 
