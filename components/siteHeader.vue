@@ -33,17 +33,14 @@
           background-color="transparent"
         >
           <v-tab
-            v-for="(name, i) in items"
-            :key="i"
+            v-for="(name, tab) in items"
+            :key="tab"
             :to="name.to"
-            router
-            exact
+            nuxt
             :ripple="false"
             active-class="text--primary"
             class="font-weight-bold"
-            min-width="96"
-            text
-            grow
+            :tabindex="tab + 1"
           >
             {{ name.title }}
           </v-tab>

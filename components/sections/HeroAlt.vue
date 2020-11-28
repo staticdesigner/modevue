@@ -3,7 +3,6 @@
     <v-img
       v-for="(item, i) in heroAlt"
       :key="i"
-      :lazy-src="item.src"
       width="100%"
       height="30vh"
       :src="item.src"
