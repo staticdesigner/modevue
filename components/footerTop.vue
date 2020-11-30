@@ -76,7 +76,7 @@
                   icon
                   large
                   color="primary"
-                  href="socialm.link"
+                  :href="socialm.link"
                   target="_blank"
                 >
                   <v-icon>{{ socialm.icon }}</v-icon>
