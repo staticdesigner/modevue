@@ -3,9 +3,9 @@
     <v-container>
       <v-row>
         <v-col class="text-center">
-          <div class="text-h4 text-md-h3 text-center font-weight-black">
+          <h2 class="text-h4 text-md-h3 text-center font-weight-black">
             Build your website with this Theme
-          </div>
+          </h2>
           <div
             class="text-h5 text-md-h4 text-center font-weight-black py-3 mb-10"
           >

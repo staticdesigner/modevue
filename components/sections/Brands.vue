@@ -6,15 +6,15 @@
     <v-container>
       <v-row>
         <v-col cols="12" sm="4" align-self="center">
-          <div
+          <h3
             :class="$vuetify.theme.dark ? 'grey--text' : null"
             class="text-h4 text-center font-weight-light mb-xs-4"
           >
             OUR SPONSORS
-          </div>
+          </h3>
         </v-col>
         <v-col cols="12" sm="8">
-          <v-slide-group show-arrows cycle draggable="true">
+          <v-slide-group show-arrows draggable="true">
             <template v-for="(l, ii) in brandsLogo">
               <v-slide-item :key="l" v-model="brandsLogo">
                 <v-card

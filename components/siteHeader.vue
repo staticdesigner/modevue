@@ -3,13 +3,7 @@
     <v-navigation-drawer v-model="drawer" fixed app temporary>
       <v-list dense>
         <v-list-item-group color="primary">
-          <v-list-item
-            v-for="(item, i) in items"
-            :key="i"
-            :to="item.to"
-            router
-            exact
-          >
+          <v-list-item v-for="(item, i) in items" :key="i" :to="item.to">
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
@@ -20,9 +14,9 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar fixed app hide-on-scroll height="70">
+    <v-app-bar fixed app hide-on-scroll height="70" elevate-on-scroll>
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true" />
-      <nuxt-link to="/">
+      <nuxt-link to="/" class="d-flex">
         <Logo />
       </nuxt-link>
       <v-spacer />

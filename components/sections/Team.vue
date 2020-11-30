@@ -6,11 +6,9 @@
     <v-container class="text-center">
       <v-row>
         <v-col>
-          <div
-            class="text-h4 text-sm-h3 text-capitalize font-weight-black mb-4"
-          >
+          <h2 class="text-h4 text-sm-h3 text-capitalize font-weight-black mb-4">
             Our Core Team
-          </div>
+          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
             nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat

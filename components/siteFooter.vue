@@ -18,7 +18,7 @@
               <a
                 :key="i"
                 class="text--secondary pa-1 pa-md-0"
-                href="s.link"
+                :href="s.link"
                 v-text="s.text"
               />
 
@@ -34,7 +34,7 @@
         ></v-col>
         <v-col class="text--secondary text-center text-md-right">
           {{ new Date().getFullYear() }} ©
-          <span class="primary--text">STATIC</span>
+          <nuxt-link class="primary--text" to="/">ModeVue</nuxt-link>
         </v-col>
       </v-row>
     </v-container>
