@@ -52,9 +52,7 @@ export default {
       heroAlt: [
         {
           src: 'pexels-ekaterina-bolovtsova-4048767.jpg',
-          heading: ' SERVICES ',
-          subHeading:
-            'Infographic hypotheses influencer user experience Long madel ture gen-z paradigm shift client partner network product seilans solve management influencer analytics leverage virality. incubator seed round massmarket. buyer agile development growth hacking business-to-consumer ecosystem ',
+          heading: ' Services ',
         },
       ],
       cards: [

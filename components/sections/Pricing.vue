@@ -46,15 +46,15 @@
               class="mx-auto transition-swing"
             >
               <h3
-                class="text-h4 text-center font-weight-black white--text pt-7"
+                class="text-h4 text-center font-weight-black white--text pt-5"
                 v-text="plan.plan"
               ></h3>
               <v-card-text
-                class="text-center subtitle-1 white--text"
+                class="text-center subtitle-1 white--text py-2"
                 v-text="plan.description"
               ></v-card-text>
               <v-card-subtitle
-                class="text-h4 font-weight-black text-center white--text"
+                class="text-h5 font-weight-black text-center white--text pt-0"
                 >{{ planDuration === 'monthly' ? plan.monthly : plan.yearly }}
                 <span class="subtitle-1"
                   >per {{ planDuration === 'monthly' ? 'month' : 'year' }}</span

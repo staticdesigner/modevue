@@ -3,7 +3,7 @@
     :class="$vuetify.theme.dark ? 'grey darken-4' : 'grey lighten-4'"
     class="py-16"
   >
-    <v-container class="text-center">
+    <v-container fluid class="text-center">
       <v-row>
         <v-col>
           <h2 class="text-h4 text-sm-h3 text-capitalize font-weight-black mb-4">
@@ -17,11 +17,7 @@
         </v-col>
       </v-row>
       <v-row>
-        <v-col
-          v-for="(item, i) in ourTeam"
-          :key="`person-${i}`"
-          class="flex-nowrap"
-        >
+        <v-col v-for="(item, i) in ourTeam" :key="`person-${i}`">
           <v-sheet class="py-12 px-6" outlined shaped>
             <v-avatar size="240"
               ><img

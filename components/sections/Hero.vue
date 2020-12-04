@@ -1,13 +1,13 @@
 <template>
   <section id="hero">
     <v-carousel
-      height="calc(100vh - 70px)"
+      height="calc(100vh - 64px)"
       dark
       cycle
       show-arrows-on-hover
       draggable="true"
-      delimiter-icon="mdi-minus"
       :hide-delimiters="$vuetify.breakpoint.xsOnly"
+      hide-delimiter-background
     >
       <v-carousel-item
         v-for="(item, i) in caroselImg"

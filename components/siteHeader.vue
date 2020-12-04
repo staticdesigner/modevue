@@ -14,32 +14,27 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar fixed app hide-on-scroll height="70" elevate-on-scroll>
+    <v-app-bar fixed app hide-on-scroll height="64" elevate-on-scroll>
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true" />
       <nuxt-link to="/" class="d-flex">
         <Logo />
       </nuxt-link>
       <v-spacer />
-      <div>
-        <v-tabs
-          class="hidden-sm-and-down"
-          optional
-          background-color="transparent"
+      <v-tabs class="hidden-sm-and-down ml-auto" optional right>
+        <v-tab
+          v-for="(name, tab) in items"
+          :key="tab"
+          :to="name.to"
+          nuxt
+          :ripple="false"
+          active-class="text--primary"
+          class="font-weight-bold"
+          :tabindex="tab + 1"
         >
-          <v-tab
-            v-for="(name, tab) in items"
-            :key="tab"
-            :to="name.to"
-            nuxt
-            :ripple="false"
-            active-class="text--primary"
-            class="font-weight-bold"
-            :tabindex="tab + 1"
-          >
-            {{ name.title }}
-          </v-tab>
-        </v-tabs>
-      </div>
+          {{ name.title }}
+        </v-tab>
+      </v-tabs>
+
       <v-btn icon @click="changeThemeColor">
         <v-icon>{{
           $vuetify.theme.dark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'
@@ -75,6 +70,11 @@ export default {
           icon: 'mdi-cash-usd',
           title: 'Pricing',
           to: '/pricing',
+        },
+        {
+          icon: 'mdi-folder-image',
+          title: 'Gallery',
+          to: '/gallery',
         },
         {
           icon: 'mdi-blogger',
