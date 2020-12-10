@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html {{ HTML_ATTRS }}>
   <head {{ HEAD_ATTRS }}>
+    {{ HEAD }}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -12,10 +13,8 @@
         dataLayer.push(arguments)
       }
       gtag('js', new Date())
-
       gtag('config', 'G-0DYDMZEYDZ')
     </script>
-    {{ HEAD }}
   </head>
   <body {{ BODY_ATTRS }}>
     {{ APP }}

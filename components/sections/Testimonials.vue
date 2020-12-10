@@ -17,7 +17,12 @@
         <v-container fill-height>
           <div style="max-width: 700px" class="mx-auto text-center">
             <v-avatar size="128" class="mb-7">
-              <img :src="`/team/${item.avtar}`" alt="John" />
+              <img
+                :src="`/team/${item.avtar}`"
+                alt="John"
+                width="128"
+                height="128"
+              />
             </v-avatar>
             <h3
               :class="
