@@ -5,12 +5,18 @@
         <HeroAlt :hero-alt="heroAlt" />
         <v-container class="py-16">
           <v-row>
-            <v-col v-for="n in 9" :key="n" class="d-flex child-flex" cols="4">
+            <v-col
+              v-for="n in 120"
+              :key="n"
+              class="d-flex child-flex"
+              cols="4"
+              xl="3"
+            >
               <v-img
-                :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
+                :src="`https://picsum.photos/700?image=${n * 5 + 10}`"
                 :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
                 aspect-ratio="1"
-                class="grey lighten-2"
+                class="grey lighten-2 rounded-lg"
               >
                 <template v-slot:placeholder>
                   <v-row
