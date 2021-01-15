@@ -34,7 +34,9 @@
           {{ name.title }}
         </v-tab>
       </v-tabs>
-
+      <v-btn icon href="https://github.com/staticdesigner/modevue">
+        <v-icon>mdi-github</v-icon>
+      </v-btn>
       <v-btn icon @click="changeThemeColor">
         <v-icon>{{
           $vuetify.theme.dark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'

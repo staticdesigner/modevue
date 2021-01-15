@@ -126,6 +126,11 @@ export default {
           link: 'https://www.linkedin.com/',
           icon: 'mdi-linkedin',
         },
+        {
+          platform: 'Github',
+          link: 'https://modevue.staticdesigner.com/',
+          icon: 'mdi-github',
+        },
       ],
     }
   },
