@@ -35,7 +35,7 @@ $ npm run generate
 ## Demo
 
 [ModeVue live demo](https://modevue.staticdesigner.com)
-<a href="https://modevue.staticdesigner.com"><img src="https://res.cloudinary.com/djhp8sjpp/image/upload/v1607417349/modevue_screenshot/light-min_tgwvhm.png"></a>
+<a href="https://modevue.staticdesigner.com"><img src="https://modevue.staticdesigner.com/modevue.png"></a>
 
 <br>
 
