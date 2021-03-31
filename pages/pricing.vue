@@ -2,10 +2,10 @@
   <section>
     <v-row no-gutters>
       <v-col cols="12">
-        <HeroAlt :hero-alt="heroAlt" />
-        <Pricing />
-        <Brands />
-        <Testimonials />
+        <SectionsHeroAlt :hero-alt="heroAlt" />
+        <SectionsPricing />
+        <SectionsBrands />
+        <SectionsTestimonials />
       </v-col>
     </v-row>
   </section>

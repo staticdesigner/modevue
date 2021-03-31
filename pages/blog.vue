@@ -2,7 +2,7 @@
   <section>
     <v-row no-gutters>
       <v-col cols="12">
-        <HeroAlt :hero-alt="heroAlt" />
+        <SectionsHeroAlt :hero-alt="heroAlt" />
       </v-col>
     </v-row>
     <v-container>

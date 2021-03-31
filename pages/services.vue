@@ -2,7 +2,7 @@
   <section>
     <v-row no-gutters>
       <v-col cols="12">
-        <HeroAlt :hero-alt="heroAlt" />
+        <SectionsHeroAlt :hero-alt="heroAlt" />
         <v-container class="py-16">
           <h2
             class="text-h4 text-md-h3 text-center font-weight-black text-capitalize"
@@ -39,7 +39,7 @@
             </v-col>
           </v-row>
         </v-container>
-        <Pricing />
+        <SectionsPricing />
       </v-col>
     </v-row>
   </section>

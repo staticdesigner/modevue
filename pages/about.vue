@@ -2,7 +2,7 @@
   <section>
     <v-row no-gutters>
       <v-col cols="12">
-        <HeroAlt :hero-alt="heroAlt" />
+        <SectionsHeroAlt :hero-alt="heroAlt" />
         <v-container>
           <v-row class="py-16">
             <v-col cols="12">
@@ -59,7 +59,7 @@
             </v-col>
           </v-row>
         </v-container>
-        <Team :our-team="ourTeam" />
+        <SectionsTeam :our-team="ourTeam" />
 
         <v-row no-gutters>
           <v-col cols="12" md="6" align-self="center">
@@ -126,7 +126,7 @@
           </v-col>
         </v-row>
 
-        <Timeline />
+        <SectionsTimeline />
       </v-col>
     </v-row>
   </section>

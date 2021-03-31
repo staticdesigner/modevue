@@ -2,12 +2,12 @@
   <section id="home">
     <v-row no-gutters>
       <v-col cols="12">
-        <Hero />
-        <Intro />
-        <CalloutBlock />
-        <Features />
-        <Brands />
-        <Testimonials />
+        <SectionsHero />
+        <SectionsIntro />
+        <SectionsCalloutBlock />
+        <SectionsFeatures />
+        <SectionsBrands />
+        <SectionsTestimonials />
       </v-col>
     </v-row>
   </section>
