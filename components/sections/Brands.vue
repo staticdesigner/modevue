@@ -24,9 +24,7 @@
                   width="140"
                   flat
                 >
-                  <v-row class="fill-height" align="center" justify="center">
-                    <v-img height="90" contain :src="`/brands/${l}`"></v-img>
-                  </v-row>
+                  <v-img height="90" contain :src="`/brands/${l}`"></v-img>
                 </v-card>
               </v-slide-item>
               <v-responsive

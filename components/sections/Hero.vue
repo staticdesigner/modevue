@@ -6,24 +6,29 @@
       cycle
       show-arrows-on-hover
       draggable="true"
-      :hide-delimiters="$vuetify.breakpoint.xsOnly"
       hide-delimiter-background
     >
       <v-carousel-item
-        v-for="(item, i) in caroselImg"
-        :key="i"
-        :src="item.src"
+        v-for="(carousel, carindex) in carouselsData"
+        :key="carindex"
+        :src="carousel.src"
         class="gradient-fill"
       >
         <v-container fill-height>
           <div style="max-width: 600px">
             <div class="text-md-h2 mb-3 text-sm-h3 text-h5 font-weight-black">
-              {{ item.heading.toUpperCase() }}
+              {{ carousel.heading.toUpperCase() }}
             </div>
-            <p class="mb-5">{{ item.subHeading }}</p>
-            <v-btn x-large class="my-3 primary">Get Started</v-btn>
+            <p class="mb-5">{{ carousel.subHeading }}</p>
+            <v-btn :x-large="$vuetify.breakpoint.smAndUp" class="my-3 primary"
+              >Get Started</v-btn
+            >
             <span class="mx-2 my-4"></span>
-            <v-btn x-large text class="my-3" outlined
+            <v-btn
+              :x-large="$vuetify.breakpoint.smAndUp"
+              text
+              class="my-3"
+              outlined
               ><v-icon left large color="primary">mdi-play</v-icon>Learn
               More</v-btn
             >
@@ -38,7 +43,7 @@
 export default {
   data() {
     return {
-      caroselImg: [
+      carouselsData: [
         {
           src: 'pexels-andrea-piacquadio-3884440.jpg',
           heading: ' PROMOTE YOUR BUSINESS WITH US ',

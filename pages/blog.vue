@@ -85,19 +85,17 @@
         </v-col>
         <v-col cols="12" xl="2" lg="3" md="4" sm="4" class="py-16">
           <aside>
-            <div class="mt-4">
-              <v-text-field
-                clearable
-                dense
-                flat
-                outlined
-                placeholder="Search..."
-                append-icon="mdi-magnify"
-                class="mb-6"
-                hide-details
-              >
-              </v-text-field>
-            </div>
+            <v-text-field
+              clearable
+              dense
+              flat
+              outlined
+              placeholder="Search..."
+              append-icon="mdi-magnify"
+              class="mb-6"
+              hide-details
+            >
+            </v-text-field>
             <v-card outlined class="mb-6">
               <div
                 class="subtitle font-weight-black text-uppercase text-center mt-4"
