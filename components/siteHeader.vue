@@ -2,8 +2,8 @@
   <div>
     <v-navigation-drawer v-model="drawer" fixed app temporary>
       <v-list dense>
-        <v-list-item-group color="primary">
-          <v-list-item v-for="(item, i) in items" :key="i" :to="item.to">
+        <v-list-item-group v-for="(item, i) in items" :key="i" color="primary">
+          <v-list-item v-if="!item.submenu" :to="item.to">
             <v-list-item-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-action>
@@ -11,6 +11,24 @@
               <v-list-item-title v-text="item.title.toUpperCase()" />
             </v-list-item-content>
           </v-list-item>
+          <v-list-group v-else :prepend-icon="item.icon" no-action>
+            <template v-slot:activator>
+              <v-list-item-content>
+                <v-list-item-title
+                  v-text="item.title.toUpperCase()"
+                ></v-list-item-title>
+              </v-list-item-content>
+            </template>
+            <v-list-item
+              v-for="child in item.submenu"
+              :key="child.title"
+              :to="child.to"
+            >
+              <v-list-item-content>
+                <v-list-item-title v-text="child.title"></v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-group>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -20,20 +38,51 @@
         <Logo />
       </nuxt-link>
       <v-spacer />
-      <v-tabs class="hidden-sm-and-down ml-auto" optional right>
-        <v-tab
-          v-for="(name, tab) in items"
-          :key="tab"
+
+      <template v-for="(name, menuitem) in items">
+        <template v-if="name.submenu">
+          <v-menu
+            :key="menuitem"
+            open-on-hover
+            offset-y
+            transition="slide-y-transition"
+            bottom
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                plain
+                class="py-8 submenubtn hidden-sm-and-down"
+                :ripple="false"
+                v-bind="attrs"
+                v-on="on"
+              >
+                {{ name.title }}
+                <v-icon right small class="mx-0"> mdi-chevron-down </v-icon>
+              </v-btn>
+            </template>
+            <v-list dense>
+              <v-list-item
+                v-for="(item, index) in name.submenu"
+                :key="index"
+                link
+                :to="item.to"
+              >
+                <v-list-item-title>{{ item.title }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+        </template>
+        <v-btn
+          v-else
+          :key="menuitem"
+          depressed
+          tile
+          plain
+          class="py-8 hidden-sm-and-down"
           :to="name.to"
-          nuxt
-          :ripple="false"
-          active-class="text--primary"
-          class="font-weight-bold"
-          :tabindex="tab + 1"
-        >
-          {{ name.title }}
-        </v-tab>
-      </v-tabs>
+          >{{ name.title }}</v-btn
+        > </template
+      ><v-spacer />
       <v-btn icon href="https://github.com/staticdesigner/modevue">
         <v-icon>mdi-github</v-icon>
       </v-btn>
@@ -67,6 +116,36 @@ export default {
           icon: 'mdi-tools',
           title: 'Services',
           to: '/services',
+          submenu: [
+            {
+              title: 'Services Page',
+              to: '/services',
+            },
+            {
+              title: 'Static Websites',
+              to: '/#',
+            },
+            {
+              title: 'Mobile Applications',
+              to: '/#',
+            },
+            {
+              title: 'Corporate websites',
+              to: '/#',
+            },
+            {
+              title: 'Editorial Sites',
+              to: '/#',
+            },
+            {
+              title: 'Ecommerce and Store',
+              to: '/#',
+            },
+            {
+              title: 'Block Chain Devemopment',
+              to: '/#',
+            },
+          ],
         },
         {
           icon: 'mdi-cash-usd',
@@ -102,3 +181,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.submenubtn {
+  cursor: default;
+}
+</style>

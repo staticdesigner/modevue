@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section :class="this.$vuetify.theme.dark ? '' : 'grey lighten-4'">
     <v-row no-gutters>
       <v-col cols="12">
         <SectionsHeroAlt :hero-alt="heroAlt" />

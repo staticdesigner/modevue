@@ -8,12 +8,16 @@
         <h2 class="text-h4 text-md-h3 text-center font-weight-black mb-7">
           The Perfect Theme for Beginners or Professionals
         </h2>
-        <p class="text-center">
-          Lorem ipsum amore amatum amatus dolor sit amet, consectetur adipiscing
-          elit. Aenean eu ornare ante. Proin aliquam odio id lorem finibus, a
-          ullamcorper arcu posuere. Pellentesque nec neque ac lorem malesuada.
+        <p class="title font-weight-light">
+          ModeVue — is a carefully crafted multi-purpose, responsive, and
+          gorgeous theme. Built with
+          <strong>Vue.js</strong>
+          and
+          <strong>Nuxt.js</strong>, it comes with the features you need to
+          quickly start developing your application.
         </p>
       </v-responsive>
+
       <v-row class="pt-12">
         <v-col v-for="card in cards" :key="card.title" cols="12" md="4">
           <v-row no-gutters>
@@ -48,24 +52,24 @@ export default {
     return {
       cards: [
         {
-          title: 'Grow your Revenue',
-          subtitle: 'Best Productivity',
+          title: 'Best Productivity',
+          subtitle: 'Professionally developed',
           text:
-            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
+            'All components and features are developed using the most up-to-date coding practices.',
           callout: '01',
         },
         {
-          title: 'Affordable Prices',
-          subtitle: 'Special Offers',
+          title: 'Fast & optimized',
+          subtitle: 'Performance',
           text:
-            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
+            'Themes are designed for maximum performance and are semantically structured to maximize SEO.',
           callout: '02',
         },
         {
-          title: 'Target Setting',
-          subtitle: 'Income Flow',
+          title: 'Built on Vuetify',
+          subtitle: 'Material Design',
           text:
-            'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
+            "Being developed with Vuetify means you have access to all of the framework's available features.",
           callout: '03',
         },
       ],
