@@ -6,6 +6,7 @@
       <footerTop />
     </v-main>
     <siteFooter />
+    <Notification />
   </v-app>
 </template>
 
