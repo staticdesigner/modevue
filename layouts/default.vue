@@ -7,6 +7,7 @@
     </v-main>
     <siteFooter />
     <Notification />
+    <Settings />
   </v-app>
 </template>
 

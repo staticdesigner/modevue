@@ -18,5 +18,22 @@
   </head>
   <body {{ BODY_ATTRS }}>
     {{ APP }}
+    <script type="text/javascript" id="zsiqchat">
+      var $zoho = $zoho || {}
+      $zoho.salesiq = $zoho.salesiq || {
+        widgetcode:
+          'f440e91b3668705fa583df5dbc6e7433860d309db2544bdba3d47511e8b81af17ac46adca5100296f44525750806cb23',
+        values: {},
+        ready: function () {},
+      }
+      var d = document
+      s = d.createElement('script')
+      s.type = 'text/javascript'
+      s.id = 'zsiqscript'
+      s.defer = true
+      s.src = 'https://salesiq.zoho.in/widget'
+      t = d.getElementsByTagName('script')[0]
+      t.parentNode.insertBefore(s, t)
+    </script>
   </body>
 </html>
