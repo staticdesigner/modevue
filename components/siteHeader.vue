@@ -32,6 +32,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
+
     <v-app-bar fixed app hide-on-scroll height="64" elevate-on-scroll>
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = true" />
       <nuxt-link to="/" class="d-flex">
@@ -83,9 +84,7 @@
           >{{ name.title }}</v-btn
         > </template
       ><v-spacer />
-      <v-btn icon href="https://github.com/staticdesigner/modevue">
-        <v-icon>mdi-github</v-icon>
-      </v-btn>
+
       <v-btn icon @click="changeThemeColor">
         <v-icon>{{
           $vuetify.theme.dark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'
