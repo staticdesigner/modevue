@@ -95,18 +95,24 @@
 
           <v-divider class="my-5"></v-divider>
 
-          <v-btn outlined class="mb-8">Free Download</v-btn>
+          <v-btn
+            outlined
+            class="mb-3"
+            href="https://github.com/staticdesigner/modevue/archive/refs/tags/1.1.0.zip"
+            >Free Download</v-btn
+          >
 
-          <br />
+          <!-- <br />
 
-          <v-btn x-large rounded color="error lighten-2" elevation="5">
+          <v-btn large rounded color="error lighten-2" elevation="5">
             Go Premium
             <v-icon right>mdi-rocket-launch</v-icon>
           </v-btn>
 
-          <p class="ma-3">
-            We setup your site using this theme with the required customization.
-          </p>
+          <p class="mx-2 my-5">
+            Under <strong>Premium</strong>, we setup your site using this theme
+            with the required customization.
+          </p> -->
         </v-card-text>
       </v-card>
     </v-menu>
