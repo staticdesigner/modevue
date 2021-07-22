@@ -157,4 +157,11 @@ export default {
 .settings .btn-settings:hover {
   opacity: 1;
 }
+/* chat window style */
+#titlediv {
+  font-family: Roboto, sans-serif;
+}
+.zsiq_theme1.zsiq_floatmain {
+  z-index: 100 !important;
+}
 </style>
