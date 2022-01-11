@@ -16,10 +16,12 @@
       >
         <v-container fill-height>
           <div style="max-width: 600px">
-            <div class="text-md-h2 mb-3 text-sm-h3 text-h5 font-weight-black">
+            <div
+              class="text-md-h2 mb-3 text-sm-h3 text-h5 font-weight-black white--text"
+            >
               {{ carousel.heading.toUpperCase() }}
             </div>
-            <p class="mb-5">{{ carousel.subHeading }}</p>
+            <p class="mb-5 white--text">{{ carousel.subHeading }}</p>
             <v-btn :x-large="$vuetify.breakpoint.smAndUp" class="my-3 primary"
               >Get Started</v-btn
             >
@@ -29,6 +31,7 @@
               text
               class="my-3"
               outlined
+              dark
               ><v-icon left large color="primary">mdi-play</v-icon>Learn
               More</v-btn
             >

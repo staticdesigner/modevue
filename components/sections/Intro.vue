@@ -54,22 +54,19 @@ export default {
         {
           title: 'Best Productivity',
           subtitle: 'Professionally developed',
-          text:
-            'All components and features are developed using the most up-to-date coding practices.',
+          text: 'All components and features are developed using the most up-to-date coding practices.',
           callout: '01',
         },
         {
           title: 'Fast & optimized',
           subtitle: 'Performance',
-          text:
-            'Themes are designed for maximum performance and are semantically structured to maximize SEO.',
+          text: 'Themes are designed for maximum performance and are semantically structured to maximize SEO.',
           callout: '02',
         },
         {
           title: 'Built on Vuetify',
           subtitle: 'Material Design',
-          text:
-            "Being developed with Vuetify means you have access to all of the framework's available features.",
+          text: "Being developed with Vuetify means you have access to all of the framework's available features.",
           callout: '03',
         },
       ],
