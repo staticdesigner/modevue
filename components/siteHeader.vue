@@ -52,9 +52,10 @@
             <template v-slot:activator="{ on, attrs }">
               <v-btn
                 plain
-                class="py-8 submenubtn hidden-sm-and-down"
+                class="py-5 submenubtn hidden-sm-and-down"
                 :ripple="false"
                 v-bind="attrs"
+                style="height: auto"
                 v-on="on"
               >
                 {{ name.title }}
