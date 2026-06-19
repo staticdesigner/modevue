@@ -22,7 +22,7 @@
                 <v-img
                   class="white--text align-end"
                   height="200px"
-                  src="pexels-moose-photos-1036641.jpg"
+                  :src="`${$router.options.base}pexels-moose-photos-1036641.jpg`"
                 >
                 </v-img>
                 <v-card-subtitle class="pb-0">

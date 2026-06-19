@@ -18,7 +18,7 @@
           <div style="max-width: 700px" class="mx-auto text-center">
             <v-avatar size="128" class="mb-7">
               <img
-                :src="`/team/${item.avtar}`"
+                :src="`${$router.options.base}team/${item.avtar}`"
                 alt="John"
                 width="128"
                 height="128"

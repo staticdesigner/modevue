@@ -24,7 +24,11 @@
                   width="140"
                   flat
                 >
-                  <v-img height="90" contain :src="`/brands/${l}`"></v-img>
+                  <v-img
+                    height="90"
+                    contain
+                    :src="`${$router.options.base}brands/${l}`"
+                  ></v-img>
                 </v-card>
               </v-slide-item>
               <v-responsive

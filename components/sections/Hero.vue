@@ -11,7 +11,7 @@
       <v-carousel-item
         v-for="(carousel, carindex) in carouselsData"
         :key="carindex"
-        :src="carousel.src"
+        :src="`${$router.options.base}${carousel.src}`"
         class="gradient-fill"
       >
         <v-container fill-height>

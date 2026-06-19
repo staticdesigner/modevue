@@ -1,8 +1,14 @@
 import colors from 'vuetify/es5/util/colors'
 
+const routerBase = process.env.GITHUB_ACTIONS === 'true' ? '/modevue/' : '/'
+
 export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
+
+  router: {
+    base: routerBase,
+  },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -22,8 +28,12 @@ export default {
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
-      { rel: 'manifest', href: '/site.webmanifest' },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: `${routerBase}favicon/favicon.ico`,
+      },
+      { rel: 'manifest', href: `${routerBase}site.webmanifest` },
     ],
   },
 
@@ -82,16 +92,6 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
 
   build: {
-    extend(config, ctx) {
-      config.module.rules.push({
-        enforce: 'pre',
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        exclude: /(node_modules)/,
-        options: {
-          fix: true,
-        },
-      })
-    },
+    extend(config, ctx) {},
   },
 }

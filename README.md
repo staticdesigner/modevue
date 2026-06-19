@@ -1,4 +1,4 @@
-# [ModeVue](https://modevue.staticdesigner.com) <img src="https://img.shields.io/badge/version-1.1.0-blue.svg" alt="Version">
+# [ModeVue](https://staticdesigner.github.io/modevue/) <img src="https://img.shields.io/badge/version-1.2.0-blue.svg" alt="Version">
 
 **ModeVue** — is a carefully crafted multi-purpose, responsive, and gorgeous theme. Built with Vue.js and Nuxt.js, it comes with the features you need to quickly start developing your application.
 
@@ -34,8 +34,8 @@ $ npm run generate
 
 ## Demo
 
-[ModeVue live demo](https://modevue.staticdesigner.com)
-<a href="https://modevue.staticdesigner.com"><img src="https://modevue.staticdesigner.com/dark.png"></a>
+[ModeVue live demo](https://staticdesigner.github.io/modevue/)
+<a href="https://staticdesigner.github.io/modevue/"><img src="https://staticdesigner.github.io/modevue/dark.png"></a>
 
 <br>
 

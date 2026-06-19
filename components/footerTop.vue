@@ -128,7 +128,7 @@ export default {
         },
         {
           platform: 'Github',
-          link: 'https://modevue.staticdesigner.com/',
+          link: 'https://github.com/staticdesigner/modevue',
           icon: 'mdi-github',
         },
       ],
