@@ -24,9 +24,8 @@ export default {
   head() {
     return {
       script: [
-        {
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-0DYDMZEYDZ',
-        },
+        // Add custom script files for this layout here, e.g.:
+        // { src: 'https://example.com/custom-script.js' }
       ],
     }
   },

@@ -98,7 +98,7 @@
           <v-btn
             outlined
             class="mb-3"
-            href="https://github.com/staticdesigner/modevue/archive/refs/tags/1.1.0.zip"
+            :href="downloadUrl"
             >Free Download</v-btn
           >
 
@@ -120,11 +120,18 @@
 </template>
 
 <script>
+import pkg from '~/package.json'
+
 export default {
   data() {
     return {
       settings: false,
     }
+  },
+  computed: {
+    downloadUrl() {
+      return `https://github.com/staticdesigner/modevue/archive/refs/tags/${pkg.version}.zip`
+    },
   },
   methods: {
     toggleMode(color) {

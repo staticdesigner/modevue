@@ -77,4 +77,4 @@ At present, we officially aim to support the last two versions of the following 
 - Well commented and clean code
 - Optimized for SEO and Accessibility
 
-Still have **questions** about this theme? Reach out to us by [email](mailto:vinay@staticdesigner.com).
+Still have **questions** about this theme? Reach out to us by [email](mailto:staticdesigner.in@gmail.com).
