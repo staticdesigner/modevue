@@ -5,6 +5,9 @@ WORKDIR /app
 # Copy package files first to leverage Docker layer caching
 COPY package*.json ./
 
+# Copy scripts folder so postinstall script can run during npm install
+COPY scripts/ ./scripts/
+
 # Install dependencies (forced for clean build)
 RUN npm install
 
