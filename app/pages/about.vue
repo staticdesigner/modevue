@@ -66,7 +66,7 @@
             <v-img
               max-height="800"
               src="/pexels-canva-studio-3277806.jpg"
-              lazy-src="pexels-canva-studio-3277806.jpg"
+              lazy-src="/pexels-canva-studio-3277806.jpg"
               cover
             >
             </v-img>
@@ -98,7 +98,7 @@
             <v-img
               max-height="800"
               src="/pexels-rfstudio-3810792.jpg"
-              lazy-src="pexels-rfstudio-3810792.jpg"
+              lazy-src="/pexels-rfstudio-3810792.jpg"
               cover
             >
             </v-img>

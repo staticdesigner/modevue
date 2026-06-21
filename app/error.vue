@@ -13,7 +13,7 @@
                   <div class="pt-16">
                     <v-img
                       src="/404.svg"
-                      lazy-src="404.svg"
+                      lazy-src="/404.svg"
                       max-width="700"
                       class="mx-auto"
                     >
