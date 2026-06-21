@@ -16,7 +16,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.15",
     "@nuxtjs/eslint-config": "^12.0.0",
-    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/vuetify": "^1.12.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^8.10.0",
