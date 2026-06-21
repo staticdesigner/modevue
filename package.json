@@ -11,7 +11,7 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "nuxt": "^2.18.1"
+    "nuxt": "^3.21.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.22.15",
