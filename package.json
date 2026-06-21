@@ -1,27 +1,25 @@
 {
-  "name": "modevue",
-  "version": "1.2.1",
+  "name": "app",
+  "type": "module",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "npm run lint:js"
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^2.18.1"
+    "nuxt": "^4.4.8",
+    "vue": "^3.5.35",
+    "vue-router": "^5.1.0",
+    "vuetify": "^4.1.2"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.22.15",
-    "@nuxtjs/eslint-config": "^12.0.0",
-    "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/vuetify": "^1.12.3",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^8.10.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.8"
+    "@invictus.codes/nuxt-vuetify": "^0.3.0"
+  },
+  "overrides": {
+    "vite-plugin-vuetify": "^2.1.3",
+    "esbuild": "0.28.1"
   }
 }
