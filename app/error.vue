@@ -12,8 +12,8 @@
                   </span>
                   <div class="pt-16">
                     <v-img
-                      src="/404.svg"
-                      lazy-src="/404.svg"
+                      :src="`${baseURL}404.svg`"
+                      :lazy-src="`${baseURL}404.svg`"
                       max-width="700"
                       class="mx-auto"
                     >
@@ -51,7 +51,10 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useTheme } from 'vuetify'
-import { useHead, clearError } from '#imports'
+import { useHead, clearError, useRuntimeConfig } from '#imports'
+
+const config = useRuntimeConfig()
+const baseURL = computed(() => config.app.baseURL || '/')
 
 const props = defineProps({
   error: {

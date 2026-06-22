@@ -65,8 +65,8 @@
           <v-col cols="12" md="6" class="align-self-center">
             <v-img
               max-height="800"
-              src="/pexels-canva-studio-3277806.jpg"
-              lazy-src="/pexels-canva-studio-3277806.jpg"
+              :src="`${baseURL}pexels-canva-studio-3277806.jpg`"
+              :lazy-src="`${baseURL}pexels-canva-studio-3277806.jpg`"
               cover
             >
             </v-img>
@@ -97,8 +97,8 @@
           <v-col cols="12" md="6" class="align-self-center">
             <v-img
               max-height="800"
-              src="/pexels-rfstudio-3810792.jpg"
-              lazy-src="/pexels-rfstudio-3810792.jpg"
+              :src="`${baseURL}pexels-rfstudio-3810792.jpg`"
+              :lazy-src="`${baseURL}pexels-rfstudio-3810792.jpg`"
               cover
             >
             </v-img>
@@ -135,8 +135,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useHead } from '#imports'
+import { ref, computed } from 'vue'
+import { useHead, useRuntimeConfig } from '#imports'
+
+const config = useRuntimeConfig()
+const baseURL = computed(() => config.app.baseURL || '/')
 
 interface HeroAltItem {
   src: string;
