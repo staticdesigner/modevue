@@ -7,7 +7,7 @@
     </v-row>
     <v-container>
       <v-row>
-        <v-col cols="12" xl="10" lg="9" md="8" sm="8" class="py-16">
+        <v-col cols="12" sm="8" md="8" lg="8" xl="8" class="py-16">
           <v-row>
             <v-col
               v-for="post in 10"
@@ -15,52 +15,45 @@
               cols="12"
               sm="6"
               md="6"
-              lg="4"
-              xl="3"
+              lg="6"
+              xl="6"
             >
               <v-card max-width="450" class="mx-auto" elevation="1">
                 <v-img
-                  class="text-white align-end"
                   height="200px"
                   :src="`${baseURL}pexels-moose-photos-1036641.jpg`"
                   cover
-                >
-                </v-img>
-                <v-card-subtitle class="pb-0">
-                  <v-btn href="#" variant="text" size="small" color="primary" class="px-0"
-                    >Admin</v-btn
-                  >
-                  <v-btn variant="text" size="small" disabled class="px-0"
-                    >October 13, 2020</v-btn
-                  >
-                </v-card-subtitle>
-                <v-card-text
-                  class="text-title-large font-weight-bold mt-3 pb-0 text-primary"
-                  style="line-height: 1.8rem"
-                >
-                  Check out the new mansion we got for our eSports team!
-                </v-card-text>
-                <v-card-text class="text-primary">
+                />
+                
+                <div class="px-4 pt-4 text-caption font-weight-bold d-flex align-center">
+                  <span class="text-primary mr-2">ADMIN</span>
+                  <span class="text-grey-darken-1" style="font-size: 0.65rem;">OCTOBER 13, 2020</span>
+                </div>
+
+                <v-card-item class="py-1">
+                  <v-card-title class="text-h6 font-weight-bold text-high-emphasis text-wrap" style="line-height: 1.4;">
+                    Check out the new mansion we got for our eSports team!
+                  </v-card-title>
+                </v-card-item>
+
+                <v-card-text class="text-body-2 text-medium-emphasis pb-2 pt-1 text-left">
                   An online streamer, also known as a live streamer, internet
                   streamer, or streamer, is a person who broadcasts themself
                   online through a live stream or pre-recorded video. The scope
                   of online streamers has grown to includ...
-                  <v-btn href="#" size="small" variant="text" color="primary">Read More</v-btn>
+                  <NuxtLink to="#" class="text-primary text-decoration-none font-weight-bold ml-1">READ MORE</NuxtLink>
                 </v-card-text>
 
-                <v-card-actions>
-                  <v-btn icon color="yellow-darken-1" variant="text"
-                    ><v-icon>mdi-comment</v-icon></v-btn
-                  >
-                  <span class="text-disabled">15</span>
-                  <v-spacer></v-spacer>
-                  <v-btn icon color="orange" variant="text"> <v-icon>mdi-heart</v-icon> </v-btn
-                  ><span class="text-disabled mr-2">45K</span>
-                  <v-btn icon color="primary" variant="text">
-                    <v-icon>mdi-share-variant</v-icon> </v-btn
-                  ><span class="text-disabled">25K</span>
-                  <span class="mr-4"></span>
-                </v-card-actions>
+                <div class="d-flex align-center px-4 pb-4 pt-2 text-body-2 text-medium-emphasis">
+                  <v-icon color="yellow-darken-2" class="mr-1">mdi-comment</v-icon>
+                  <span class="mr-6">15</span>
+                  
+                  <v-icon color="orange" class="mr-1">mdi-heart</v-icon>
+                  <span class="mr-6">45K</span>
+                  
+                  <v-icon color="primary" class="mr-1">mdi-share-variant</v-icon>
+                  <span>25K</span>
+                </div>
               </v-card>
             </v-col>
           </v-row>
@@ -81,56 +74,66 @@
             </v-container>
           </div>
         </v-col>
-        <v-col cols="12" xl="2" lg="3" md="4" sm="4" class="py-16">
+        <v-col cols="12" sm="4" md="4" lg="4" xl="4" class="py-16">
           <aside>
             <v-text-field
               clearable
               density="compact"
               variant="outlined"
               placeholder="Search..."
-              append-icon="mdi-magnify"
+              append-inner-icon="mdi-magnify"
               class="mb-6"
+              bg-color="grey-lighten-4"
               hide-details
             >
             </v-text-field>
-            <v-card variant="outlined" class="mb-6">
+            
+            <v-card class="mb-6" elevation="1">
               <div
-                class="text-subtitle-1 font-weight-black text-uppercase text-center mt-4"
+                class="text-subtitle-1 font-weight-black text-uppercase text-center pt-4"
               >
                 Categories
               </div>
-              <v-list density="compact">
+              <v-list density="compact" class="bg-transparent px-4">
                 <v-list-item
                   v-for="(item, i) in items"
                   :key="i"
                   :title="item.text"
-                  color="primary"
+                  link
+                  class="px-0 py-1 text-body-2 text-medium-emphasis"
                 >
                 </v-list-item>
               </v-list>
             </v-card>
-            <v-card variant="outlined" class="mb-6">
+
+            <v-card class="mb-6" elevation="1">
               <div
-                class="text-subtitle-1 font-weight-black text-uppercase text-center mt-4"
+                class="text-subtitle-1 font-weight-black text-uppercase text-center pt-4"
               >
                 Tags
               </div>
-              <v-card-text>
-                <v-chip-group column>
-                  <v-chip v-for="tag in tags" :key="tag">
+              <v-card-text class="px-4 pb-4">
+                <div class="d-flex flex-wrap ga-2">
+                  <v-chip
+                    v-for="tag in tags"
+                    :key="tag"
+                    variant="flat"
+                    color="grey-lighten-3"
+                    class="text-grey-darken-4 font-weight-medium text-caption"
+                  >
                     {{ tag }}
                   </v-chip>
-                </v-chip-group>
+                </div>
               </v-card-text>
             </v-card>
-            <v-card variant="outlined" class="mb-6">
+
+            <v-card class="mb-6" elevation="1">
               <div
-                class="text-subtitle-1 font-weight-black text-uppercase text-center mt-4"
+                class="text-subtitle-1 font-weight-black text-uppercase text-center pt-4"
               >
                 Recent Comments
               </div>
-
-              <v-list lines="three" density="compact">
+              <v-list lines="three" density="compact" class="bg-transparent">
                 <template v-for="(item, index) in comments" :key="index">
                   <v-list-subheader
                     v-if="item.header"

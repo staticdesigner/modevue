@@ -44,24 +44,23 @@
                 <v-divider></v-divider>
               </v-list>
               <div class="d-flex justify-center mt-5">
-                <v-btn
+                <v-icon-btn
                   v-for="(socialm, i) in social"
                   :key="`social-${i}`"
-                  class="d-flex"
-                  icon
                   size="large"
                   color="primary"
+                  variant="text"
                   :href="socialm.link"
                   target="_blank"
                 >
                   <v-icon>{{ socialm.icon }}</v-icon>
-                </v-btn>
+                </v-icon-btn>
               </div>
             </v-col>
           </v-row>
         </v-col>
-        <v-col cols="1" class="text-center d-none d-md-flex py-12">
-          <v-divider vertical></v-divider>
+        <v-col cols="2" class="text-center d-none d-md-flex py-12">
+          <v-divider vertical class="mx-auto"></v-divider>
         </v-col>
         <v-col cols="12" md="5" class="py-12">
           <h3 class="mb-8">SEND YOUR MESSAGE</h3>

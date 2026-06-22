@@ -1,14 +1,14 @@
 <template>
   <section id="intro" class="py-16">
     <v-container>
-      <v-responsive class="max-auto mx-auto text-center" max-width="600">
+      <v-responsive class="max-auto mx-auto text-center" max-width="700">
         <v-avatar color="primary" size="70" class="mb-8">
           <v-icon size="x-large">mdi-web</v-icon>
         </v-avatar>
         <h2 class="text-headline-large text-md-display-medium text-center font-weight-black mb-7">
           The Perfect Theme for Beginners or Professionals
         </h2>
-        <p class="text-title-medium font-weight-light">
+        <p class="text-title-large">
           ModeVue — is a carefully crafted multi-purpose, responsive, and
           gorgeous theme. Built with
           <strong>Vue.js</strong>
@@ -34,7 +34,7 @@
             </v-col>
             <v-col v-if="card.callout" cols="2">
               <span
-                class="text-h3 text-grey font-weight-bold pr-8"
+                class="text-display-small text-md-display-medium text-lg-display-large text-grey font-weight-bold pr-8"
                 style="opacity: 0.1"
                 >{{ card.callout }}</span
               >

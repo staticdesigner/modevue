@@ -39,27 +39,28 @@
           <v-hover v-slot="{ isHovering, props }">
             <v-card
               v-bind="props"
+              variant="elevated"
               :elevation="isHovering ? 24 : plan.elevation"
               :color="plan.color"
               max-width="400"
               :class="[isHovering ? 'zoom' : 'notzoom', 'mx-auto', 'transition-swing']"
             >
-              <h3
-                class="text-headline-large text-center font-weight-black text-white pt-5"
+              <v-card-title
+                class="text-headline-large text-center font-weight-black text-white"
                 v-text="plan.plan"
-              ></h3>
+              ></v-card-title>
               <v-card-text
-                class="text-center text-subtitle-1 text-white py-2"
+                class="text-center text-subtitle-1 text-white py-1"
                 v-text="plan.description"
               ></v-card-text>
-              <v-card-subtitle
-                class="text-headline-small font-weight-black text-center text-white pt-0"
+              <v-card-text
+                class="text-headline-small font-weight-black text-center text-white pb-5 pt-1"
               >
                 {{ planDuration === 'monthly' ? plan.monthly : plan.yearly }}
-                <span class="text-subtitle-1"
+                <span class="text-title-medium"
                   >per {{ planDuration === 'monthly' ? 'month' : 'year' }}</span
                 >
-              </v-card-subtitle>
+              </v-card-text>
               <v-list>
                 <v-list-item
                   v-for="(feature, ik) in plan.features"
@@ -117,7 +118,7 @@ interface Plan {
 const plans = ref<Plan[]>([
   {
     plan: 'Basic',
-    elevation: 0,
+    elevation: 1,
     color: 'primary-darken-1',
     description: 'Best Plan for Small Businesses',
     monthly: '$10',
@@ -193,7 +194,7 @@ const plans = ref<Plan[]>([
   },
   {
     plan: 'Gold',
-    elevation: 0,
+    elevation: 1,
     color: 'orange-darken-3',
     description: 'Best Plan for Power Users',
     monthly: '$100',

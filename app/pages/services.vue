@@ -73,7 +73,7 @@ const cards = ref<Card[]>([
   {
     title: 'Powerful template',
     text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-    icon: 'mdi-desktop-mac',
+    icon: 'mdi-flash',
   },
   {
     title: 'Retina Ready',
@@ -83,7 +83,7 @@ const cards = ref<Card[]>([
   {
     title: 'Fast Loading',
     text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-    icon: 'mdi-speedometer',
+    icon: 'mdi-rocket',
   },
   {
     title: 'Unlimited Colors',
@@ -93,7 +93,7 @@ const cards = ref<Card[]>([
   {
     title: 'Premium Sliders',
     text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-    icon: 'mdi-page-layout-header',
+    icon: 'mdi-view-carousel',
   },
 ])
 

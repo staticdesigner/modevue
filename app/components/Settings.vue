@@ -9,7 +9,7 @@
     >
       <template v-slot:activator="{ props }">
         <v-btn size="large" class="pl-0 btn-settings" v-bind="props">
-          <v-icon color="white">mdi-cog</v-icon>
+          <v-icon>mdi-cog</v-icon>
         </v-btn>
       </template>
       <v-card>

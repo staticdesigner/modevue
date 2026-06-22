@@ -1,9 +1,10 @@
 <template>
   <v-form>
-    <v-text-field label="Name" density="compact" variant="outlined"></v-text-field>
-    <v-text-field label="Email" density="compact" variant="outlined"></v-text-field>
-    <v-text-field label="Subject" density="compact" variant="outlined"></v-text-field>
+    <v-text-field label="Name" color="primary" density="compact" variant="outlined"></v-text-field>
+    <v-text-field label="Email" color="primary"  density="compact" variant="outlined"></v-text-field>
+    <v-text-field label="Subject" color="primary" density="compact" variant="outlined"></v-text-field>
     <v-textarea
+      color="primary"
       density="compact"
       label="Your Message"
       auto-grow

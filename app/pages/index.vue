@@ -14,7 +14,17 @@
 </template>
 
 <script setup lang="ts">
-// Index page imports and uses sectionsHero, sectionsIntro, sectionsCalloutBlock, sectionsFeatures, sectionsBrands, and sectionsTestimonials.
+import { useHead } from '#imports'
+
+useHead({
+  title: 'Home',
+  meta: [
+    {
+      name: 'description',
+      content: 'ModeVue - A carefully crafted, multi-purpose, responsive, and gorgeous website theme.'
+    }
+  ]
+})
 </script>
 
 <style scoped>

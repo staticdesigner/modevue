@@ -9,7 +9,7 @@
           <div class="d-flex flex-wrap justify-md-start justify-center">
             <template v-for="(s, i) in menu" :key="i">
               <a
-                class="text-secondary pa-1 pa-md-0"
+                class="text-primary pa-1 pa-md-0"
                 :href="s.link"
                 v-text="s.text"
               />
@@ -24,7 +24,7 @@
             </template>
           </div>
         </v-col>
-        <v-col class="text-secondary text-center text-md-right">
+        <v-col class="text-accent text-center text-md-right">
           {{ new Date().getFullYear() }} ©
           <NuxtLink class="text-primary" to="/">ModeVue</NuxtLink>
         </v-col>
@@ -52,10 +52,10 @@ interface FooterMenuItem {
 }
 
 const menu: FooterMenuItem[] = [
+  { text: 'Home', link: '/' },
   { text: 'Support', link: '#' },
   { text: 'Contact Us', link: '#' },
-  { text: 'Disclaimer', link: '#' },
-  { text: 'Covid-19 Operation', link: '#' },
+  { text: 'Disclaimer', link: '#' }, 
 ]
 </script>
 

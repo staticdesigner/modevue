@@ -13,8 +13,8 @@
               xl="3"
             >
               <v-img
-                :src="`https://picsum.photos/700?image=${n * 5 + 10}`"
-                :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+                :src="`${baseURL}${localImages[(n - 1) % localImages.length]}`"
+                :lazy-src="`${baseURL}${localImages[(n - 1) % localImages.length]}`"
                 aspect-ratio="1"
                 class="bg-grey-lighten-2 rounded-lg"
                 cover
@@ -39,8 +39,24 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useHead } from '#imports'
+import { computed, ref } from 'vue'
+import { useHead, useRuntimeConfig } from '#imports'
+
+const config = useRuntimeConfig()
+const baseURL = computed(() => config.app.baseURL || '/')
+
+const localImages = [
+  'kaylah-matthews-6e5hgWV2DAo-unsplash.jpg',
+  'pexels-andrea-piacquadio-3795295.jpg',
+  'pexels-andrea-piacquadio-3830745.jpg',
+  'pexels-andrea-piacquadio-3884440.jpg',
+  'pexels-canva-studio-3277806.jpg',
+  'pexels-ekaterina-bolovtsova-4048767.jpg',
+  'pexels-moose-photos-1036641.jpg',
+  'pexels-peter-olexa-4012966.jpg',
+  'pexels-rfstudio-3810792.jpg',
+  'pexels-thirdman-5961072.jpg'
+]
 
 interface HeroAltItem {
   src: string;

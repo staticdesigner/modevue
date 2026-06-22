@@ -7,7 +7,7 @@
             Build your website with this Theme
           </h2>
           <div
-            class="text-headline-small text-md-headline-large text-center font-weight-black py-3 mb-10"
+            class="text-headline-small text-md-headline-large text-center font-weight-black mb-12"
           >
             Purchase now. Only $49!
           </div>
@@ -23,12 +23,12 @@
         >
           <v-avatar
             size="80"
-            class="text-h4 bg-white font-weight-bold text-primary mb-5"
+            class="bg-white text-primary mb-5"
             style="opacity: 1"
           >
-            {{ card.callout }}
+            <v-icon size="40">{{ card.icon }}</v-icon>
           </v-avatar>
-          <div class="text-title-medium text-uppercase mt-1 mb-4" v-text="card.title"></div>
+          <div class="text-title-large text-uppercase mt-1 mb-4" v-text="card.title"></div>
 
           <p v-text="card.text"></p>
           <v-row no-gutters>
@@ -52,7 +52,7 @@ interface Card {
   title: string
   subtitle: string
   text: string
-  callout: string
+  icon: string
 }
 
 const cards = ref<Card[]>([
@@ -60,19 +60,19 @@ const cards = ref<Card[]>([
     title: 'Material Design',
     subtitle: 'Best Productivity',
     text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-    callout: '01',
+    icon: 'mdi-palette',
   },
   {
     title: 'Affordable Prices',
     subtitle: 'Special Offers',
     text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-    callout: '02',
+    icon: 'mdi-tag-outline',
   },
   {
     title: 'Fast Loading',
     subtitle: 'Income Flow',
     text: 'Similique sunt in culpa qui officia deserunt mollitia animi, id est laborut dolorum fuga.harum quidem rerum facilis estexpedita distinctio.',
-    callout: '03',
+    icon: 'mdi-flash',
   },
 ])
 </script>

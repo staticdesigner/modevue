@@ -31,7 +31,7 @@
 
     <v-app-bar scroll-behavior="elevate hide" height="64">
       <v-app-bar-nav-icon class="d-md-none" @click="drawer = true" />
-      <NuxtLink to="/" class="d-flex text-decoration-none">
+      <NuxtLink to="/" class="ps-2 ps-md-4 d-flex text-decoration-none">
         <Logo />
       </NuxtLink>
       <v-spacer />
@@ -60,6 +60,7 @@
                 :key="index"
                 :to="item.to"
                 :title="item.title"
+                :active="false"
               ></v-list-item>
             </v-list>
           </v-menu>
@@ -106,17 +107,17 @@ interface MenuItem {
 const items = ref<MenuItem[]>([
   {
     icon: 'mdi-folder-home-outline',
-    title: 'Home',
+    title: 'HOME',
     to: '/',
   },
   {
     icon: 'mdi-account',
-    title: 'About',
+    title: 'ABOUT',
     to: '/about',
   },
   {
     icon: 'mdi-tools',
-    title: 'Services',
+    title: 'SERVICES',
     to: '/services',
     submenu: [
       {
@@ -151,22 +152,22 @@ const items = ref<MenuItem[]>([
   },
   {
     icon: 'mdi-cash-usd',
-    title: 'Pricing',
+    title: 'PRICING',
     to: '/pricing',
   },
   {
     icon: 'mdi-folder-image',
-    title: 'Gallery',
+    title: 'GALLERY',
     to: '/gallery',
   },
   {
     icon: 'mdi-blogger',
-    title: 'Blog',
+    title: 'BLOG',
     to: '/blog',
   },
   {
     icon: 'mdi-contacts',
-    title: 'Contact',
+    title: 'CONTACT',
     to: '/contact',
   },
 ])

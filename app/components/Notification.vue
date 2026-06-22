@@ -4,28 +4,27 @@
     :timeout="-1"
     :vertical="mdAndDown"
   >
-    {{ text }}
-
-    <template v-slot:actions>
-      <div class="text-center">
+    <div :class="mdAndDown ? 'd-flex flex-column ga-3 w-100' : 'd-flex align-center justify-space-between w-100'">
+      <div class="text-body-1 text-left">
+        {{ text }}
+      </div>
+      <div class="d-flex justify-end ga-3">
         <v-btn
           color="info"
-          class="ml-0"
-          size="small"
+          variant="elevated"
           @click="snackbar = false"
         >
-          More info
+          More Info
         </v-btn>
         <v-btn
           color="primary"
-          class="ml-3 mr-auto"
-          size="small"
+          variant="elevated"
           @click="snackbar = false"
         >
           Accept
         </v-btn>
       </div>
-    </template>
+    </div>
   </v-snackbar>
 </template>
 
