@@ -1,5 +1,5 @@
 <template>
-  <v-app :class="isDark ? 'bg-grey-darken-4' : 'bg-white'">
+  <div :class="isDark ? 'bg-grey-darken-4' : 'bg-white'">
     <section id="error">
       <v-row no-gutters>
         <v-col cols="12">
@@ -45,16 +45,17 @@
         </v-col>
       </v-row>
     </section>
-  </v-app>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, watch } from 'vue'
 import { useTheme } from 'vuetify'
-import { useHead, clearError, useRuntimeConfig } from '#imports'
+import { useHead, clearError, useRuntimeConfig, useCookie } from '#imports'
 
 const config = useRuntimeConfig()
 const baseURL = computed(() => config.app.baseURL || '/')
+const themeCookie = useCookie('theme')
 
 const props = defineProps({
   error: {
@@ -65,6 +66,10 @@ const props = defineProps({
 
 const theme = useTheme()
 const isDark = computed(() => theme.global.name.value === 'dark')
+
+watch(() => theme.global.name.value, (newTheme) => {
+  themeCookie.value = newTheme
+})
 
 const pageNotFound = 'Page you are looking for could not be found.'
 const otherError = 'An error occurred'

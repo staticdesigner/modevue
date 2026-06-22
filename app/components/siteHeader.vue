@@ -85,13 +85,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useTheme } from 'vuetify'
+import { useCookie } from '#imports'
 
 const drawer = ref(false)
 const theme = useTheme()
+const themeCookie = useCookie('theme')
 
 const isDark = computed(() => theme.global.name.value === 'dark')
+
+watch(() => theme.global.name.value, (newTheme) => {
+  themeCookie.value = newTheme
+})
 
 const changeThemeColor = () => {
   theme.global.name.value = isDark.value ? 'light' : 'dark'

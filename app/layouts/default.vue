@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <siteHeader />
     <v-main>
       <slot />
@@ -8,7 +8,7 @@
     <siteFooter />
     <Notification />
     <Settings />
-  </v-app>
+  </div>
 </template>
 
 <script setup lang="ts">
