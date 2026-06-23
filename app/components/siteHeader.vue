@@ -85,7 +85,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch, onMounted } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { useTheme } from 'vuetify'
 import { useCookie } from '#imports'
 
@@ -93,14 +93,14 @@ const drawer = ref(false)
 const theme = useTheme()
 const themeCookie = useCookie('theme')
 
-const isDark = computed(() => theme.global.name.value === 'dark')
+// Apply saved theme synchronously at setup time.
+// useCookie is available on both server and client in Nuxt,
+// so this runs before first render — no flash, no dead first-click.
+if (themeCookie.value) {
+  theme.global.name.value = themeCookie.value
+}
 
-// Restore saved theme preference on load
-onMounted(() => {
-  if (themeCookie.value) {
-    theme.global.name.value = themeCookie.value
-  }
-})
+const isDark = computed(() => theme.global.name.value === 'dark')
 
 watch(() => theme.global.name.value, (newTheme) => {
   themeCookie.value = newTheme
