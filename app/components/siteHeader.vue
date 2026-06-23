@@ -75,7 +75,7 @@
       </template>
       <v-spacer />
 
-      <v-btn icon @click="changeThemeColor">
+      <v-btn icon @click="toggleTheme">
         <v-icon>{{
           isDark ? 'mdi-white-balance-sunny' : 'mdi-weather-night'
         }}</v-icon>
@@ -85,30 +85,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
-import { useTheme } from 'vuetify'
-import { useCookie } from '#imports'
+import { ref } from 'vue'
+import { useAppTheme } from '~/composables/useAppTheme'
 
 const drawer = ref(false)
-const theme = useTheme()
-const themeCookie = useCookie('theme')
-
-// Apply saved theme synchronously at setup time.
-// useCookie is available on both server and client in Nuxt,
-// so this runs before first render — no flash, no dead first-click.
-if (themeCookie.value) {
-  theme.global.name.value = themeCookie.value
-}
-
-const isDark = computed(() => theme.global.name.value === 'dark')
-
-watch(() => theme.global.name.value, (newTheme) => {
-  themeCookie.value = newTheme
-})
-
-const changeThemeColor = () => {
-  theme.global.name.value = isDark.value ? 'light' : 'dark'
-}
+const { toggleTheme, isDark } = useAppTheme()
 
 interface MenuItem {
   icon: string;

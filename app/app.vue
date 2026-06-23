@@ -1,5 +1,5 @@
 <template>
-  <v-app :theme="themeCookie">
+  <v-app>
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
@@ -7,9 +7,16 @@
 </template>
 
 <script setup lang="ts">
-import { useCookie } from '#imports'
+import { onMounted } from 'vue'
+import { useAppTheme } from '~/composables/useAppTheme'
 
-const themeCookie = useCookie('theme', { default: () => 'dark' })
+const { initTheme } = useAppTheme()
+
+// Must be onMounted — localStorage is client-only.
+// This restores the saved theme before the user sees any flicker.
+onMounted(() => {
+  initTheme()
+})
 </script>
 
 <style>
