@@ -7,16 +7,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
-import { useAppTheme } from '~/composables/useAppTheme'
-
-const { initTheme } = useAppTheme()
-
-// Must be onMounted — localStorage is client-only.
-// This restores the saved theme before the user sees any flicker.
-onMounted(() => {
-  initTheme()
-})
+// Theme is initialized by plugins/theme.client.ts before mount.
+// Toggle logic lives in composables/useAppTheme.ts.
 </script>
 
 <style>
