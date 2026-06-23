@@ -1,5 +1,6 @@
 {
-  "name": "app",
+  "name": "modevue",
+  "version": "2.0.0",
   "type": "module",
   "private": true,
   "scripts": {
