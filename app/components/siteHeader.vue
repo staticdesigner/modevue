@@ -85,7 +85,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useTheme } from 'vuetify'
 import { useCookie } from '#imports'
 
@@ -94,6 +94,13 @@ const theme = useTheme()
 const themeCookie = useCookie('theme')
 
 const isDark = computed(() => theme.global.name.value === 'dark')
+
+// Restore saved theme preference on load
+onMounted(() => {
+  if (themeCookie.value) {
+    theme.global.name.value = themeCookie.value
+  }
+})
 
 watch(() => theme.global.name.value, (newTheme) => {
   themeCookie.value = newTheme
