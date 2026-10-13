@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "nuxt": "^4.5.1",
-    "vue": "^3.5.35",
+    "vue": "^3.5.44",
     "vue-router": "^5.1.0",
     "vuetify": "^4.1.2"
   },
